@@ -1,0 +1,9 @@
+.windowContainer {
+  display: flex;
+  flex-direction: row;
+  border: 2px solid blue;
+}
+
+form {
+  display: flex;
+}

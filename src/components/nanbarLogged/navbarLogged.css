@@ -1,0 +1,24 @@
+.navbar {
+  width: 100%;
+  border: 1px solid yellow;
+  margin-top: 0;
+  display: flex;
+  flex-direction: row;
+}
+.navLeft {
+  width: 20%;
+}
+.navCentre {
+  width: 60%;
+  display: flex;
+  justify-content: center;
+}
+.navRightLogged {
+  width: 20%;
+  display: flex;
+  justify-content: flex-end;
+}
+
+.userDetailsNavbar {
+  margin-right: 30px;
+}

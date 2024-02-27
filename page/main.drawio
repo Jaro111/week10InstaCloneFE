@@ -1,0 +1,28 @@
+<mxfile host="65bd71144e">
+    <diagram id="gvD8vRYDSPc_21cGMVDH" name="Page-1">
+        <mxGraphModel dx="1187" dy="594" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="850" pageHeight="1100" math="0" shadow="0">
+            <root>
+                <mxCell id="0"/>
+                <mxCell id="1" parent="0"/>
+                <mxCell id="5" style="edgeStyle=none;html=1;" edge="1" parent="1">
+                    <mxGeometry relative="1" as="geometry">
+                        <mxPoint x="410" y="90" as="targetPoint"/>
+                        <mxPoint x="410" y="100" as="sourcePoint"/>
+                    </mxGeometry>
+                </mxCell>
+                <mxCell id="2" value="NAVBAR" style="whiteSpace=wrap;html=1;" vertex="1" parent="1">
+                    <mxGeometry x="125" y="10" width="585" height="100" as="geometry"/>
+                </mxCell>
+                <mxCell id="4" value="CENTRE" style="whiteSpace=wrap;html=1;" vertex="1" parent="1">
+                    <mxGeometry x="130" y="130" width="570" height="230" as="geometry"/>
+                </mxCell>
+                <mxCell id="7" value="FOOTER" style="whiteSpace=wrap;html=1;" vertex="1" parent="1">
+                    <mxGeometry x="130" y="390" width="570" height="150" as="geometry"/>
+                </mxCell>
+                <mxCell id="12" value="&amp;lt;LogOrSign&amp;gt;&lt;br&gt;" style="whiteSpace=wrap;html=1;" vertex="1" parent="1">
+                    <mxGeometry x="530" y="30" width="160" height="60" as="geometry"/>
+                </mxCell>
+            </root>
+        </mxGraphModel>
+    </diagram>
+</mxfile>
