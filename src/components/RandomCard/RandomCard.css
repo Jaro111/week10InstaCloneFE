@@ -1,0 +1,27 @@
+.imageCard {
+  border: 1px solid black;
+  box-sizing: border-box;
+  display: flex;
+  flex-direction: column;
+  width: 24.8%;
+  height: 350px;
+}
+
+.randomImage-Wrapper {
+  box-sizing: border-box;
+  display: flex;
+  flex-wrap: wrap;
+  width: 100%;
+  height: 85%;
+}
+
+.randomImage {
+  width: 100%;
+  height: 100%;
+}
+
+.randomImage-content {
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+}

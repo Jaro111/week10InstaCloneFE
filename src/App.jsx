@@ -10,27 +10,15 @@ import { count } from "mathjs";
 function App() {
   //
   const [user, setUser] = useState({});
-  const [randomPhotos, setRandomPhotos] = useState([]);
 
   //
-  const randomFunc = async () => {
-    const photos = await myFetchFunc();
-    const newArray = [...photos];
-    setRandomPhotos(newArray);
-    console.log(newArray[0].imageURLs.small);
-    console.log(randomPhotos);
-  };
-
-  useEffect(() => {
-    randomFunc();
-  }, []);
 
   return (
     <>
       {!user.username ? (
         <div className="body-Wrapper">
           <Navbar setUser={setUser} />
-          <Centre photos={randomPhotos} />
+          <Centre />
           <Footer />
         </div>
       ) : (

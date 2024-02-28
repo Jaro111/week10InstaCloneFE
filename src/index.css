@@ -6,5 +6,6 @@ body {
   margin: 0;
   display: flex;
   min-width: 100vh;
+  overflow-x: hidden;
   justify-content: center;
 }
