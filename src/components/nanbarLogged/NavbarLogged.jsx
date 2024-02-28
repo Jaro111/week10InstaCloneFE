@@ -10,7 +10,11 @@ export const NavbarLogged = (props) => {
       </div>
       <div className="navRightLogged">
         <p className="userDetailsNavbar">User: {props.user}</p>
+        <p className="userDetailsNavbar">Email: {props.email}</p>
       </div>
+      <button className="logOutBtn" onClick={props.logOut}>
+        LOG OUT
+      </button>
     </div>
   );
 };

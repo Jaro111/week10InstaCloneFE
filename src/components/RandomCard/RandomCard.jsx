@@ -6,11 +6,13 @@ export const RandomCard = (props) => {
   return (
     <div className="imageCard">
       <div className="randomImage-Wrapper">
-        <img className="randomImage" alt="randomPhoto" src={props.photo} />
+        <button className="photoButton">
+          <img className="randomImage" alt="randomPhoto" src={props.photo} />
+        </button>
       </div>
       <div className="randomImage-content">
-        <p>gggfgffgfg</p>
-        <p>dndfdnfdc</p>
+        <button className="photographerBtn">{props.photographer}</button>
+        <p>Likes: {props.likes}</p>
       </div>
     </div>
   );

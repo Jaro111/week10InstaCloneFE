@@ -1,10 +1,11 @@
-import myFetchFunc from "../../utils/fetchImages";
-import { RandomCard } from "../RandomCard/RandomCard";
-import "./Centre.css";
+import myFetchFunc from "../../../utils/fetchImages";
+import { RandomCard } from "../../RandomCard/RandomCard";
+import "./centreLogged.css";
 import { useState, useEffect } from "react";
 
-export const Centre = (props) => {
+export const CentreLogged = (props) => {
   const [randomPhotos, setRandomPhotos] = useState([]);
+  const [photo, setPhoto] = useState("");
 
   useEffect(() => {
     randomFunc();
@@ -29,6 +30,7 @@ export const Centre = (props) => {
                 photo={item.imageURLs.small}
                 photographer={item.photographer_name}
                 likes={item.likes}
+                // displayPhoto={dispalyPhotoFunc}
               />
             );
           })}

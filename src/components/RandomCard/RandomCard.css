@@ -1,4 +1,5 @@
 .imageCard {
+  background-color: azure;
   border: 1px solid black;
   box-sizing: border-box;
   display: flex;
@@ -14,6 +15,13 @@
   width: 100%;
   height: 85%;
 }
+.photoButton {
+  cursor: pointer;
+  width: 100%;
+  height: 100%;
+  margin: 0;
+  padding: 0;
+}
 
 .randomImage {
   width: 100%;
@@ -21,7 +29,24 @@
 }
 
 .randomImage-content {
+  font-size: 14px;
+  font-weight: 900;
   display: flex;
   justify-content: space-around;
   align-items: center;
+  margin: 0;
+  padding: 0;
+}
+
+.photographerBtn {
+  font-size: 14px;
+  font-weight: 900;
+  width: fit-content;
+  height: fit-content;
+  cursor: pointer;
+  background-color: azure;
+  border: none;
+  margin: 0;
+  padding: 0;
+  width: 100px;
 }

@@ -1,7 +1,6 @@
 .windowContainer {
   display: flex;
   flex-direction: row;
-  border: 2px solid rgb(0, 255, 34);
 }
 
 form {
