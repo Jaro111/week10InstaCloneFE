@@ -19,6 +19,7 @@ export const LogIn = ({ setUser }) => {
     }
     console.log("Handle submit");
     const data = await login(username, password);
+    console.log("Data in login", data);
     setUser(data.user);
   };
 

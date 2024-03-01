@@ -1,10 +1,10 @@
 .navbar {
   background-color: rgb(83, 83, 243);
+  border-bottom: 2px solid black;
   width: 100%;
   margin-top: 0;
   display: flex;
-  justify-content: space-between;
-  flex-direction: row;
+  align-items: center;
 }
 .navLeft {
   width: 20%;

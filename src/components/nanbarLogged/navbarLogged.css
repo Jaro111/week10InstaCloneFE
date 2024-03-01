@@ -1,6 +1,8 @@
-.navbar {
+.navbarLogged {
+  background-color: blueviolet;
+  border-bottom: 2px solid black;
+  font-weight: 900;
   width: 100%;
-  border: 1px solid yellow;
   margin-top: 0;
   display: flex;
   flex-direction: row;

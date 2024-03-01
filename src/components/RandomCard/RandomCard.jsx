@@ -6,7 +6,7 @@ export const RandomCard = (props) => {
   return (
     <div className="imageCard">
       <div className="randomImage-Wrapper">
-        <button className="photoButton">
+        <button className="photoButton" onClick={props.clickPhoto}>
           <img className="randomImage" alt="randomPhoto" src={props.photo} />
         </button>
       </div>

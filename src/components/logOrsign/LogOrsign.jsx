@@ -4,7 +4,7 @@ import { useState } from "react";
 import { LogIn } from "../logIn/Login";
 import { SignUp } from "../signUp/signUp";
 
-export const LogOrSign = ({ setUser }) => {
+export const LogOrSign = ({ setUser }, { setIslogged }) => {
   const [log, setLog] = useState(false);
   const [sign, setSign] = useState(false);
 
@@ -21,9 +21,13 @@ export const LogOrSign = ({ setUser }) => {
   return (
     <div className="logOrSignContainer">
       {!log && !sign ? (
-        <div>
-          <button onClick={logInClick}>Log in</button>
-          <button onClick={signUpClick}>Sign Up</button>
+        <div className="LogSIgnButtons-wrapper">
+          <button className="LogSIgnButtons" onClick={logInClick}>
+            Log in
+          </button>
+          <button className="LogSIgnButtons" onClick={signUpClick}>
+            Sign Up
+          </button>
         </div>
       ) : log && !sign ? (
         <div className="logSignButtons">

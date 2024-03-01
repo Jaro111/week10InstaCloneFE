@@ -30,6 +30,7 @@ export const CentreLogged = (props) => {
                 photo={item.imageURLs.small}
                 photographer={item.photographer_name}
                 likes={item.likes}
+                clickPhoto={props.clickPhoto}
                 // displayPhoto={dispalyPhotoFunc}
               />
             );

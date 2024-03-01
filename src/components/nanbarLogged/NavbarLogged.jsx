@@ -2,8 +2,9 @@ import React from "react";
 import "./navbarLogged.css";
 
 export const NavbarLogged = (props) => {
+  console.log(props);
   return (
-    <div className="navbar">
+    <div className="navbarLogged">
       <div className="navLeft"></div>
       <div className="navCentre">
         <h2>BLABLABLA</h2>

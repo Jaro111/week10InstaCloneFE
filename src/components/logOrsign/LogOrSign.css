@@ -1,2 +1,9 @@
-.logOrSignContainer {
+.LogSIgnButtons-wrapper {
+  margin-right: 20px;
+  display: flex;
+  justify-content: space-around;
+}
+
+.LogSIgnButtons {
+  margin: 5px;
 }

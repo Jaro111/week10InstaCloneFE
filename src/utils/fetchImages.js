@@ -9,9 +9,11 @@ export const myFetchFunc = async () => {
       id: photo.id,
       imageURLs: {
         small: photo.urls.small,
+        regular: photo.urls.regular,
       },
       likes: photo.likes,
       photographer_name: photo.user.username,
+      photographer_id: photo.user.id,
     };
   });
   return sortedPhotos;

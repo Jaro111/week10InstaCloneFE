@@ -1,4 +1,4 @@
-// import { writeCookie } from "../common";
+import { writeCookie } from "../common";
 // import { getTokenFromCookie } from "../common";
 
 // SIGN UP
@@ -17,7 +17,6 @@ export const signupuUser = async (username, email, password) => {
   });
 
   const data = await response.json();
-  console.log("signup", data);
   return data;
 };
 
@@ -37,10 +36,31 @@ export const login = async (username, password) => {
   });
 
   const userData = await response.json();
-  console.log(userData);
+  writeCookie("jwt_token", userData.user.token, 3);
 
   //   writeCookie("jwt_token", userData.user.token, 7);
   return userData;
+};
+
+// AUTH CHECK
+
+export const authCheck = async (jwt) => {
+  try {
+    const response = await fetch("http://localhost:5002/users/authCheck", {
+      method: "GET",
+      mode: "cors",
+      headers: {
+        "Content-Type": "application/json",
+        Authorization: `Bearer ${jwt}`,
+      },
+      //
+    });
+    const data = await response.json();
+    return data;
+    //
+  } catch (error) {
+    console.log(error);
+  }
 };
 
 // GET ALL USERS
