@@ -6,7 +6,9 @@ import { useEffect } from "react";
 
 export const UserCard = (props) => {
   const [userData, setUserData] = useState({});
+  const [userPhoto, setUserPhoto] = useState("");
 
+  console.log(userPhoto);
   useEffect(() => {
     photographerDataFunc();
   }, []);
@@ -14,6 +16,10 @@ export const UserCard = (props) => {
   const photographerDataFunc = async () => {
     const data = await getPhotographer(props.photographer);
     setUserData(data);
+    userData.profile_image > 0
+      ? setUserPhoto(userData.profile_image.small)
+      : null;
+
     console.log(data);
   };
 
@@ -21,9 +27,6 @@ export const UserCard = (props) => {
     <div className="UserCard">
       <button onClick={props.backFromUserCard}>back</button>
       <div className="UserDetails">
-        <img
-          src={userData.profile_image > 0 ? userData.profile_image.small : null}
-        ></img>
         <p>User name: {props.photographer}</p>
         <p>Name: {userData.name}</p>
         <p>Likes: {userData.likes}</p>

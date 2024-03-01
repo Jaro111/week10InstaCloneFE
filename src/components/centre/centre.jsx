@@ -47,6 +47,12 @@ export const Centre = (props) => {
   const backFromUserCard = () => {
     setGetPhotographer(false);
   };
+
+  const fullImgToUserCard = () => {
+    setGetPhotographer(!getPhotographer);
+    console.log(photographer);
+  };
+
   //
   return (
     <div className="centre">
@@ -62,7 +68,7 @@ export const Centre = (props) => {
                   photographer={item.photographer_name}
                   likes={item.likes}
                   clickPhoto={() => clickPhoto(item)}
-                  clickPhotographer={() => clickPhotographer(item)}
+                  clickPhotographer={() => clickPhotographer()}
                 />
               );
             })
@@ -73,13 +79,19 @@ export const Centre = (props) => {
             photographer={photographer}
           ></UserCard>
         )
-      ) : (
+      ) : !getPhotographer ? (
         <FullImageCard
           backToCentre={backToCentre}
           fullPhoto={photoUrl}
           photographer={photographer}
           likes={likes}
+          fullImgToUserCard={fullImgToUserCard}
         />
+      ) : (
+        <UserCard
+          backFromUserCard={backFromUserCard}
+          photographer={photographer}
+        ></UserCard>
       )}
     </div>
   );

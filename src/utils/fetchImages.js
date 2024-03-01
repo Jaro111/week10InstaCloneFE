@@ -31,7 +31,6 @@ export const getPhotographer = async (username) => {
   userData["name"] = data.name;
   userData["username"] = data.username;
   userData["id"] = data.id;
-  userData["profile_image"] = data.profile_image;
   userData["likes"] = data.total_likes;
   userData["social"] = data.social;
 
