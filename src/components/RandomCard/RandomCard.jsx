@@ -1,6 +1,4 @@
-import React, { useEffect } from "react";
 import "./RandomCard.css";
-import { useState } from "react";
 
 export const RandomCard = (props) => {
   return (
@@ -11,7 +9,9 @@ export const RandomCard = (props) => {
         </button>
       </div>
       <div className="randomImage-content">
-        <button className="photographerBtn">{props.photographer}</button>
+        <button className="photographerBtn" onClick={props.clickPhotographer}>
+          {props.photographer}
+        </button>
         <p>Likes: {props.likes}</p>
       </div>
     </div>
