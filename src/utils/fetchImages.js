@@ -58,6 +58,7 @@ export const getPhotographerPhotos = async (username) => {
       photographer_name: photo.user.username,
     };
   });
+  return userPhotos;
 };
 
 export default {

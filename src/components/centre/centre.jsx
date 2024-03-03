@@ -26,16 +26,17 @@ export const Centre = (props) => {
   };
   //
   const clickPhoto = (item) => {
-    setGetFullPhoto(true);
-    console.log(!getFullPhoto);
-    setPhotoUrl(item.imageURLs.regular);
-    setPhotographer(item.photographer_name);
-    setLikes(item.likes);
+    if (props.user.username) {
+      setGetFullPhoto(true);
+      console.log(!getFullPhoto);
+      setPhotoUrl(item.imageURLs.regular);
+      setPhotographer(item.photographer_name);
+      setLikes(item.likes);
+    }
   };
 
-  const clickPhotographer = (item) => {
+  const clickPhotographer = () => {
     setGetPhotographer(!getPhotographer);
-    setPhotographer(item.photographer_name);
     console.log(photographer);
     console.log(getPhotographer);
   };
@@ -57,27 +58,18 @@ export const Centre = (props) => {
   return (
     <div className="centre">
       {!getFullPhoto ? (
-        !getPhotographer ? (
-          props.photos === 0 ? null : (
-            randomPhotos.map((item, index) => {
-              return (
-                <RandomCard
-                  key={index}
-                  photo={item.imageURLs.small}
-                  photoId={item.id}
-                  photographer={item.photographer_name}
-                  likes={item.likes}
-                  clickPhoto={() => clickPhoto(item)}
-                  clickPhotographer={() => clickPhotographer()}
-                />
-              );
-            })
-          )
-        ) : (
-          <UserCard
-            backFromUserCard={backFromUserCard}
-            photographer={photographer}
-          ></UserCard>
+        props.photos === 0 ? null : (
+          randomPhotos.map((item, index) => {
+            return (
+              <RandomCard
+                key={index}
+                photo={item.imageURLs.small}
+                likes={item.likes}
+                clickPhoto={() => clickPhoto(item)}
+                clickPhotographer={() => clickPhotographer()}
+              />
+            );
+          })
         )
       ) : !getPhotographer ? (
         <FullImageCard

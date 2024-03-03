@@ -1,8 +1,6 @@
-import myFetchFunc from "./utils/fetchImages";
 import { useEffect, useState } from "react";
 import { Navbar } from "./components/navbar/Navbar";
 import { Centre } from "./components/centre/centre";
-import { CentreLogged } from "./components/centre/centerLogged/CenterLogged";
 import { Footer } from "./components/footer/Footer";
 import { NavbarLogged } from "./components/nanbarLogged/NavbarLogged";
 import { getTokenFromCookie } from "./common";
@@ -13,7 +11,6 @@ function App() {
   //
 
   const [user, setUser] = useState({});
-  const [isLogged, setIslogged] = useState(false);
 
   useEffect(() => {
     if (document.cookie) {
